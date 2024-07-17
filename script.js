@@ -19,6 +19,21 @@ function resetValues() {
 }
 
 function addContent() {
+  if (studentName.value === "" || studentID.value === "" || email.value === "" || contactNumber.value === "") {
+    alert(`Oops! Please fill out all fields.`);
+    return;
+  }
+
+  if (studentID.value.length > 5) {
+    alert(`The student ID should be less than 5 digits.`);
+    return;
+  }
+
+  if (contactNumber.value.length > 10) {
+    alert(`The contact number should not be more than 10 digits.`);
+    return;
+  }
+  
   let studentToBeAdded = {
     name: studentName.value,
     id: studentID.value,
@@ -31,6 +46,7 @@ function addContent() {
   if (tempLocalStorage == null) {
     tempLocalStorage = [];
   } else {
+    
     tempLocalStorage = JSON.parse(tempLocalStorage);
   }
 
@@ -51,6 +67,8 @@ function loadValuesIntoTable() {
   newtable.classList.add("newlyregisteredstudent");
 
   for (let row in tempLocalStorage) {
+   
+    
     console.log(row);
 
     let studentcontainer = document.createElement("tr");
@@ -94,9 +112,9 @@ function loadValuesIntoTable() {
   console.log(tempLocalStorage);
   newlyregisteredstudent.replaceWith(newtable);
 }
+
+
 // deleting a studnet  row 
-
-
 function deleteContent(event) {
   let tempLocalStorage = JSON.parse(localStorage.getItem("studentInfo"));
 
@@ -108,8 +126,8 @@ function deleteContent(event) {
 
   window.location.reload();
 }
-// editing a student row
 
+// editing a student row
 function editContent(event) {
   let tempLocalStorage = JSON.parse(localStorage.getItem("studentInfo"));
   let touched = event.target.closest("button");

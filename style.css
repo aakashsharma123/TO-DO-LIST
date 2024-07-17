@@ -1,14 +1,17 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
 body {
     width: 100%;
     height: 100%;
-    background-image: url(/images/R.jpeg);
+    background-image: url(/images/R.jpeg); 
+    overflow-y: scroll; /* Add scrollbar for overflow */
 }
+
+
 
 header>div {
 
@@ -102,8 +105,10 @@ header>div>h1 {
 }
 
 table {
+   
     width: 100%;
     border-collapse: collapse;
+    
 
 }
 
@@ -114,6 +119,7 @@ table td {
     text-align: center;
     font-size: xx-large;
     font-family: sans-serif;
+    
 }
 
 table th {
@@ -121,7 +127,11 @@ table th {
 }
 
 .table-container {
-    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    
+    width: 100%;
+
 }
 
 .deletebutton {
