@@ -94,6 +94,8 @@ function loadValuesIntoTable() {
   console.log(tempLocalStorage);
   newlyregisteredstudent.replaceWith(newtable);
 }
+// deleting a studnet  row 
+
 
 function deleteContent(event) {
   let tempLocalStorage = JSON.parse(localStorage.getItem("studentInfo"));
@@ -106,6 +108,7 @@ function deleteContent(event) {
 
   window.location.reload();
 }
+// editing a student row
 
 function editContent(event) {
   let tempLocalStorage = JSON.parse(localStorage.getItem("studentInfo"));
@@ -120,13 +123,15 @@ function editContent(event) {
     email.value = cells[2].textContent;
     contactNumber.value = cells[3].textContent;
 
-    tempLocalStorage = tempLocalStorage.filter(item => item.id !== studentID.value);
+    tempLocalStorage = tempLocalStorage.filter(
+      (item) => item.id !== studentID.value
+    );
 
     localStorage.setItem("studentInfo", JSON.stringify(tempLocalStorage));
   }
 }
-
-submitButton.addEventListener("click", function() {
+// if the delete and edit button is clicked perform the task 
+submitButton.addEventListener("click", function () {
   editContent();
   addContent();
 });

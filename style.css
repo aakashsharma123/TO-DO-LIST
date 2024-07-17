@@ -73,7 +73,8 @@ header>div>h1 {
 .form-to-edit-js>form>button {
     padding: 0.5rem;
     width: 100%;
-    background-color:#8b0037;;
+    background-color: #8b0037;
+    ;
     border-radius: 1rem;
     border: 1px solid whitesmoke;
     font-size: xx-large;
@@ -103,8 +104,9 @@ header>div>h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    
+
 }
+
 table th,
 table td {
     border: 5px solid #ddd;
@@ -121,26 +123,31 @@ table th {
 .table-container {
     margin-top: 20px;
 }
-.deletebutton{
+
+.deletebutton {
     padding: 1rem;
     margin-left: 2rem;
-    background-color:#8b0037;;
+    background-color: #8b0037;
+    ;
     margin-top: 5px;
-    box-shadow: 0px 0px 1px 2px ;
-    
+    box-shadow: 0px 0px 1px 2px;
+
 
 }
-.editbutton{
+
+.editbutton {
     padding: 1rem;
     margin-left: 2rem;
-    background-color:#8b0037;;
+    background-color: #8b0037;
+    ;
     margin-top: 5px;
-    box-shadow: 0px 0px 1px 2px ;
+    box-shadow: 0px 0px 1px 2px;
 }
+
 .itemscolour {
     color: darkgoldenrod;
     font-family: cursive;
     font-weight: bolder;
     font-size: x-large;
-   
+
 }
